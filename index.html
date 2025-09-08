@@ -18,6 +18,7 @@
             --text-color-light: #333;
             --bg-gradient-dark: linear-gradient(135deg, #2a2525 0%, #40484b 100%);
             --text-color-dark: #f0f0f0;
+            --banner-height: 44px;
         }
 
         * {
@@ -90,7 +91,7 @@
 
         .theme-toggle {
             position: fixed;
-            top: 20px;
+            top: calc(20px + var(--banner-height));
             right: 20px;
             z-index: 1000;
         }
@@ -99,7 +100,7 @@
             display: flex;
             justify-content: space-between;
             position: fixed;
-            top: 20px;
+            top: calc(20px + var(--banner-height));
             left: 50%;
             transform: translateX(-50%);
             width: min(90%, 400px);
@@ -111,6 +112,30 @@
             z-index: 1000;
             transition: all 0.3s ease;
             -webkit-backdrop-filter: blur(10px);
+        }
+
+        .top-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--banner-height);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0 1rem;
+            background: black;
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            z-index: 1200;
+            text-align: center;
+        }
+
+        body.dark-theme .top-banner {
+            background: linear-gradient(90deg, #0f172a, #1e293b, #334155);
         }
 
         .nav-el {
@@ -784,6 +809,7 @@
 </head>
 
 <body>
+    <div class="top-banner">Portfolio v2 coming soon 🚀</div>
     <nav class="navbar">
         <a class="nav-el" href="#home-link">Home</a>
         <a class="nav-el" href="#project-link">Projects</a>
