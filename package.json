@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-v1",
+  "version": "1.0.0",
+  "description": "A modern, minimalist portfolio template built with HTML, CSS, and JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "portfolio",
+    "personal-website",
+    "html",
+    "css",
+    "javascript",
+    "responsive",
+    "dark-mode"
+  ],
+  "author": "Salman Najah",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^latest"
+  }
+}
